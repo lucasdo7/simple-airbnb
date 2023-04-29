@@ -7,8 +7,9 @@ require 'faker'
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
+Flat.destroy_all
 puts 'Creating 15 faker flats'
-15.times do
+6.times do
   flat = Flat.new(
     name: Faker::Company.name,
     address: "#{Faker::Address.street_address}, #{Faker::Address.city}",

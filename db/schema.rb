@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_04_28_033427) do
+ActiveRecord::Schema[7.0].define(version: 2023_04_29_134847) do
   create_table "flats", force: :cascade do |t|
     t.string "name"
     t.string "address"
@@ -21,6 +21,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_28_033427) do
     t.boolean "pet_friendly"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "picture_url"
   end
 
 end

@@ -1,5 +1,5 @@
 class FlatsController < ApplicationController
-  before_action :set_flats, only: [:show, :edit, :update]
+  before_action :set_flats, only: [:show, :edit, :update, :destroy]
 
   def index
     if params[:query].present?
@@ -39,6 +39,12 @@ class FlatsController < ApplicationController
     else
       render :new, status: :unprocessable_entity
     end
+  end
+
+  def destroy
+    # @flat = Flat.find(params[:id])
+    @flat.destroy
+    redirect_to flats_path, status: :see_other
   end
 
   private

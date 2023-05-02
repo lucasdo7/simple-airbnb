@@ -1,4 +1,5 @@
 class FlatsController < ApplicationController
+  before_action :set_flats, only: [:show]
 
   def index
     if params[:query].present?
@@ -10,7 +11,7 @@ class FlatsController < ApplicationController
   end
 
   def show
-    @flat = Flat.find(params[:id])
+    # @flat = Flat.find(params[:id])
   end
 
   def new
@@ -31,5 +32,9 @@ class FlatsController < ApplicationController
 
   def flat_params
     params.require(:flat).permit(:name, :address, :description, :price_per_night, :number_of_guests, :stars, :pet_friendly, :picture_url)
+  end
+
+  def set_flats
+    @flat = Flat.find(params[:id])
   end
 end

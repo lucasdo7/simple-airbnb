@@ -7,16 +7,17 @@
         <h1><%= @flat.name %></h1>
         <p class="flat-show-address"> Address: <%= @flat.address %></p>
       </div>
+
       <div class="flat-show-card">
         <h3>A bit more about this flat...</h3>
         <p><%= @flat.description %></p>
+      <%= link_to "Back to Flats", flats_path, class: 'btn btn-danger' %>
       </div>
     </div>
 
     <div class="col-4">
       <div class="flat-show-card">
         <h5>Book this place!</h5>
-
         <form action="">
           <div class="input-group">
             <span class="input-group-text" id="start-date-label">From:</span>
@@ -29,6 +30,7 @@
           <input type="submit" value="Book" class="btn btn-success mt-2" style="width: 100%">
         </form>
       </div>
+
       <div class="flat-show-card">
         <h3>Details</h3>
         <div class="flex">
@@ -46,6 +48,7 @@
           </div>
         </div>
       </div>
+
       <div class="flat-show-card">
         <div class="flex-align">
           <h6 class="no-mb">Share</h6>

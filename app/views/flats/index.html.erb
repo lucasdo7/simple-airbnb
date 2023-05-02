@@ -22,7 +22,7 @@
           <div class="flat-card-image" style="background-image: url('<%= flat.picture_url %>')"></div>
           <div class="flat-card-content">
             <div class="flat-card-title">
-              <h4><%= flat.name %></h4>
+              <h4><%= link_to flat.name, flat_path(flat), class: 'text-decoration-none' %></h4>
             </div>
             <p><%= flat.address %></p>
             <div class="flex">

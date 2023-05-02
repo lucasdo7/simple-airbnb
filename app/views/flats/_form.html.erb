@@ -7,6 +7,6 @@
   <%= f.input :number_of_guests, collection: 1..5 %>
   <%= f.input :stars, collection: 1..5 %>
   <%= f.input :pet_friendly, :input_html => { :checked => false } %>
-  <%= f.submit "Create Flat", class: "btn btn-primary" %>
+  <%= f.submit class: "btn btn-primary" %>
   <%= link_to "Back", flats_path, class: 'btn btn-danger' %>
 <% end %>
